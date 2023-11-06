@@ -1,0 +1,246 @@
+body{
+  background-color: #c1c3c1;
+  }
+
+/* Specifically targets background imgs*/
+#img{
+  height: 150px;
+  width: 150px;
+  }
+
+/* For all images on page*/
+img{
+  height: 950px;
+  width: 700px;
+  position: fixed;
+  display:flex;
+  }
+  
+  /* Animatons to help move imgs left, right, up, and down */
+
+    @keyframes shakeLeftRight {
+      0%{
+        transform: translateX(0);
+      }
+      25% {
+        transform: translateX(-5px); /* Shakes to the left */
+      }
+      75% {
+        transform: translateX(5px); /* Shakes to the right */
+      }
+    }
+    
+  /* Targets img in top left corner */
+    .leftcorner {
+      animation: shakeLeftRight 3.5s linear infinite;
+    }
+  
+    @keyframes shakeRightLeft {
+      0% {
+        transform: translateX(0);
+      }
+      25% {
+        transform: translateX(5px); /* Shakes to the right */
+      }
+      75% {
+        transform: translateX(-5px); /* Shakes to the left */
+      }
+    }
+  
+  /* Targets img in top right corner */
+    .rightcorner {
+      animation: shakeRightLeft 3.5s linear infinite;
+    }
+    
+  /* Targets img in bottom right corner */
+    .rightcornerdown {
+      animation: shakeRightLeft 3.5s linear infinite;
+    }
+  
+
+    @keyframes shakeLeftRightDown {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      25% {
+        transform: translateY(-5px); /* Shakes up */
+      }
+      75% {
+        transform: translateY(5px); /* Shakes down */
+      }
+    }
+    
+    /* Targets img in bottom left corner */
+    .leftcornerdown {
+      animation: shakeLeftRightDown 3.5s linear infinite;
+      max-width: 100%;
+    }
+    
+    @keyframes shakeRightLeftDown {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      25% {
+        transform: translateY(5px); /* Shakes down */
+      }
+      75% {
+        transform: translateY(-5px); /* Shakes up */
+      }
+    }
+  
+    /* Targets img in bottom right corner */
+    .rightcornerdown {
+      animation: shakeRightLeftDown 3.5s linear infinite;
+      max-width: 100%;
+    }
+
+/* Targets main text on page such as h1, h4, and the pop up div elements */
+.episode-info{
+margin-top: 220px;
+margin-left: 24px;
+}
+
+.episode-info h1{
+color:  #646363;
+font-size: 60px;
+font-family: 'Poppins', sans-serif;
+letter-spacing: 1.5;
+}
+
+.episode-info h4{
+  font-weight:lighter;
+  font-size: 17px;
+  color: #6a6868;
+  font-family: sans-serif;
+}
+
+/* Overlay */
+.popup .overlay {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100vw;
+  height:100vh;
+  background:rgb(132, 132, 125);
+  z-index:1;
+  display:none;
+  opacity: 0.95;
+}
+
+/* Content within the popup */
+.popup .content {
+  position:absolute;
+  top:20%;
+  left:50%;
+  transform:translate(-50%,-50%) scale(0);
+  width:500px;
+  height:250px;
+  z-index:5;
+  text-align:center;
+  padding:20px;
+  box-sizing:border-box;
+}
+
+/* CSS for the close button of popup */
+.popup .close-btn {
+  cursor:pointer;
+  position:absolute;
+  right:5px;
+  top:20px;
+  width:30px;
+  height:30px;
+  color:#fff;
+  font-size:45px;
+  font-weight:600;
+  line-height:30px;
+  text-align:center;
+  border-radius:50%;
+}
+
+.popup h2{
+  color: white;
+  margin-bottom: 50px;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+}
+
+.popup p{
+  color: white;
+  line-height: 30px;
+  text-align: left;
+  font-family: sans-serif;
+}
+
+/* Targets elements with these classes when they are "active" and sets their "display" property to "block" to make them visible */
+.popup.active .overlay {
+  display:block;
+}
+
+/* When elements are active, "popup" and "content" elements centers and scales itself*/
+.popup.active .content {
+  transition:all 300ms ease-in-out;
+  transform:translate(-50%,-50%) scale(1);
+}
+
+/* CSS applied to buttons are applied to all buttons on page */
+button {
+  position:flex;
+  transform:translate(-50%,-50%);
+  font-size:18px;
+  border:none;
+  color:#c1c3c1;
+  text-transform:uppercase;
+  font-weight:600;
+  background:#c1c3c1;
+  border-radius: 100px;
+  margin-right: -100px;
+  margin-top: 18px;
+}
+
+button:hover{
+opacity: 0.8;
+}
+
+/* List/transcript Icon */
+.bi-bi-list{
+  fill: rgb(114, 114, 105);
+  font-size: 50px;
+}
+
+/* Adjusting transcript icon */
+.transcript-btn svg {
+  margin-right: 10px; 
+}
+
+/*Adjusting text within <a> element*/
+a{
+  display: flex;
+  color: rgb(114, 114, 105);
+  font-size: 16px;
+  font-weight: lighter;
+  text-transform: initial;
+}
+
+.audio {
+  display: inline-block;
+}
+
+/* #audio-btn ID used to target the play and pause button directly */
+#audio-btn {
+  background-color: rgb(122, 122, 116);
+  border: none;
+  cursor: pointer;
+  margin-top: 60px;
+  margin-left: 8px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 16px;
+  padding-right: 14px;
+}
+
+/* Style the play button SVG */
+#audio-btn svg {
+  fill: #c1c3c1; 
+  width: 3em;
+  height: 3em;
+}
