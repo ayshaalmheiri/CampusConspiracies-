@@ -1,0 +1,279 @@
+body{
+  background-color: #c1c3c1;
+  text-decoration: none;
+ }
+  
+#img{
+  height: 150px;
+  width: 150px;
+  position: fixed;
+ }  
+  
+ img{
+  height: 950px;
+  width: 700px;
+  position: fixed;
+  display:flexbox;
+}
+
+@keyframes shakeLeftRight {
+  0%{
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px); /* Shake to the left */
+  }
+  75% {
+    transform: translateX(5px); /* Shake to the right */
+  }
+}
+
+.leftcorner {
+  animation: shakeLeftRight 3.5s linear infinite;
+}
+
+@keyframes shakeRightLeft {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px); /* Shake to the right */
+  }
+  75% {
+    transform: translateX(-5px); /* Shake to the left */
+  }
+}
+
+.rightcorner {
+  animation: shakeRightLeft 3.5s linear infinite;
+}
+
+.rightcornerdown {
+  animation: shakeRightLeft 3.5s linear infinite;
+}
+
+@keyframes shakeLeftRightDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-5px); /* Shake up */
+  }
+  75% {
+    transform: translateY(5px); /* Shake down */
+  }
+}
+
+.leftcornerdown {
+  animation: shakeLeftRightDown 3.5s linear infinite;
+  max-width: 100%;
+}
+
+@keyframes shakeRightLeftDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(5px); /* Shake down */
+  }
+  75% {
+    transform: translateY(-5px); /* Shake up */
+  }
+}
+
+.rightcornerdown {
+  animation: shakeRightLeftDown 3.5s linear infinite;
+  max-width: 100%;
+}
+
+.title{
+  display:inline-block;
+  padding: 50px;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-top: 70px;
+ }
+  
+#first-page .main-text{
+  font-family: 'Poppins', sans-serif;
+  font-size: 65px;
+  font-weight: bold;
+  color:#7d7d7d;
+  margin-top: 150px;
+}
+
+#first-page .sub-text {
+  font-family: sans-serif;
+  color:#6a6868;
+  font-size: 30px;
+  font-weight:lighter;
+ }
+
+#second-page-btn{
+  position: relative;
+  height: 140px;
+  width: 175px;
+  padding-right: 4px;
+  margin-top: 3px;
+}
+
+#second-page-btn:hover{
+  opacity: 0.8;
+ }
+  
+#second-page-btn:active{
+  opacity: 0.6;
+ }
+
+#first-page .popup-overlay {
+  margin-left: 12px;
+  margin-top: 60px;
+}
+
+.overlay{
+  position: absolute;
+  top:0;
+  left: 0;
+  padding-top: 10%;
+  width: 100vw;
+  height: 100%;
+  background: rgb(132, 132, 125);
+  z-index: -1;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.popup .overlay {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100vw;
+  height:100vh;
+  background:rgb(132, 132, 125);
+  z-index:1;
+  display:none;
+  opacity: 0.95;
+}
+
+.popup .content {
+  position:absolute;
+  top:25%;
+  left:50%;
+  transform:translate(-50%,-50%) scale(0);
+  width:500px;
+  height:250px;
+  z-index:5;
+  text-align:center;
+  padding:20px;
+  box-sizing:border-box;
+  font-family:"Open Sans",sans-serif;
+}
+
+.popup .close-btn {
+  cursor:pointer;
+  position:absolute;
+  right:20px;
+  top:20px;
+  width:30px;
+  height:30px;
+  color:#fff;
+  font-size:45px;
+  font-weight:600;
+  line-height:30px;
+  text-align:center;
+  border-radius:50%;
+}
+
+/* overlay summary close button styling */
+.overlay .close-button{
+  position: absolute;
+  top:2%;
+  right: 4%;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+  font-size: 3em;
+}
+
+.overlay p{
+  padding: 10%;
+  color: #c1c3c1;
+  font-weight: 200px;
+  font-size: 1em;
+}
+
+.popup.active h2{
+  color: white;
+  margin-top: 50px;
+  margin-right: 5px ;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+}
+
+.popup-overlay p{
+  color: white;
+  line-height: 30px;
+  text-align: left;
+  margin-top: 40px;
+  font-size: 18px;
+}
+
+.popup.active .overlay {
+  display:block;
+}
+
+.popup.active .content {
+  transition:all 300ms ease-in-out;
+  transform:translate(-50%,-50%) scale(1);
+}
+
+/* expose summary when summary is active*/
+body.activeSummary .overlay-summary{
+  z-index: 2;
+  opacity: 1;
+}
+
+button {
+  position:absolute;
+  transform:translate(-50%,-50%);
+  font-size:18px;
+  border:none;
+  color:#c1c3c1;
+  text-transform:uppercase;
+  font-weight:600;
+  background:#c1c3c1;
+  border-radius: 100px;
+  padding: 10px 20px; /* Padding for the button */
+}
+
+#first-page .info-btn {
+  margin-left: 8px;
+  margin-top: 80px;
+ }
+  
+.bi-info-circle{
+  fill: rgb(114, 114, 105);
+  cursor: pointer;
+  top:0.2%;
+  right: 35%;
+  font-size: 200%;
+  position: absolute;
+}
+
+.info-btn:active{
+  opacity: 0.8;
+}
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
