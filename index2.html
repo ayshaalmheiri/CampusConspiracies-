@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Campus Conspiracies</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&family=Press+Start+2P&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles2.css">
+    <script src="script.js" defer></script>
+    <link rel="icon"  href="img/alien.png"> 
+  </head>
+  <body>
+    <div id="img" class="image">
+      <!--Background image of page-->
+      <!--Image for left corner of page-->
+      <img class="leftcorner" src="img/leftcorner.png" style="width: 980px; height: 850px; margin-left: -20px;">
+      <!--Image for right corner of page-->
+      <img class="rightcorner" src="img/rightcorner.png" style="width: 980px; height: 850px; padding-left: 482px;">
+      <!--Image for bottom left corner of page-->
+      <img class="leftcornerdown" src="img/leftcornerdown.png" style="width: 998px; height: 850px; margin-left: -20px;">
+      <!--Image for bottom right corner of page-->
+      <img class="rightcornerdown"  src="img/rightcornerdown.png" style="width: 990px; height: 850px; padding-left: 450px;">
+    </div>
+    <center>
+    <!--Main text-->
+    <div class="episode-info">
+        <h1>TITLE</h1>
+        <h4><i>"But I checked Brightspace last night and discovered that I got an A on the Comm Labs assignment."</i></h4>
+        <!--Transcript popup section -->
+        <div class="popup-overlay">
+          <div class="popup" id="popup-1">
+            <div class="overlay"></div>
+            <div class="content">
+              <div class="close-btn" onclick="togglePopup()">&times;</div>
+              <!--Title for icon-->
+              <h2>Transcript</h2>
+              <!--Transcript-->
+              <p>
+                <b>Jackie:</b> Welcome back to Campus Conspiracies, a podcast where we unearth NYUAD’s darkest secrets and craziest gossip. Last week, we sat down with Coach Huw to discuss the athletic department’s underground money laundering ring. I’m joined today by an extra special guest, Aysha Salma, a student in Communication Labs. Now Aysha, you’ve got a truly crazy story for us today, is that right?
+                <br>
+                <br>
+                <b>Aysha:</b> Yes, that’s right.
+                <br>
+                <br>
+                <b>Jackie:</b> Can you tell us what that is?
+                <br>
+                <br>
+                <b>Aysha:</b> Well, I - I mean… there’s no other way to put it. 
+                <br>
+                <br>
+                [Laughter] 
+                <br>
+                <br>
+                I’m still in disbelief. But I checked Brightspace last night and discovered that I got an A on the Comm Labs assignment. 
+                <br>
+                <br>
+                <b>Jackie:</b> To clarify, you got an A in Professor Mansor’s Communication Labs class?
+                <br>
+                <br>
+                <b>Aysha:</b> Correct.
+                <br>
+                <br>
+                <i>Someone on coms with static: Can we fact check that?</i>
+                <br>
+                <br>
+                <b>Jackie:</b> Just when I thought I’d seen everything. Now, Aysha, the question everyone’s asking: how did you do it?
+                <br>
+                <br>
+                <b>Aysha:</b> First, of course, I’d have to thank my family, my friends, my life coach, and the campus cats - they all believed in me. Growing up humbly, I never saw myself getting an A in Communication Labs. But my story shows that with the right support and a lot of late nights, you can really do anything.
+                <br>
+                <br>
+                <b>Jackie:</b> That’s really touching, but it couldn’t have been just late nights. So many Comm Labs students seek extreme solutions to their problems. I myself converted religions to see which deity gives the best grades.
+                <br>
+                <br>
+                <b>Aysha:</b> Are you implying I was helped by an otherworldly force?  Like a ghost? 
+                <br>
+                <br>
+                <b>Jackie:</b> We’ve seen crazier things on this show. But if it wasn’t a divine force, how did you navigate the assignment parameters? I got a C+ last time for improperly capitalizing a subsubsection on the project report.
+                <br>
+                <br>
+                <b>Aysha:</b> Well, Jackie, that’s a grave transgression. Honestly, a C+ was very generous of her.
+                <br>
+                <br>
+                <b>Jackie:</b> Maybe that’s true, but it does seem a bit unfair.
+                <br>
+                <br>
+                <b>Aysha:</b> That’s exactly why I was nervous to come up here today. When you’re an A student, there’s always a target on your back. I feel unsafe coming into class sometimes. I know how people talk about me.
+                <br>
+                <br>
+                <b>Jackie:</b> [Murmurs]
+                <br>
+                <br>
+                <b>Aysha:</b> But my family told me it was my duty to come here and share my story.
+                <br>
+                <br>
+                <b>Jackie:</b> Thank you, Aysha, for sharing your truth.
+              </p>
+            </div>
+          </div>
+          <!--Transcript button that opens up the popup-->
+          <button onclick="togglePopup()">
+            <a class="transcript-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi-bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+              </svg>
+              <!--Title within popup-->
+              Transcript
+              </div>
+            </a>
+          </button>
+          <!--Audio button to play audio-->
+            <div class="audio">
+                <button id="audio-btn" onclick="togglePlay()">
+                  <!--Play icon to showcase that audio can be played when clicked-->
+                  <span class="play-icon"><svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:rgb(208, 208, 192)}</style><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span>
+                  <!--Pause icon to showcase that audio can be paused when clicked-->
+                  <span class="pause-icon" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi-pause-fill" viewBox="0 0 16 16"><path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/></svg></span>
+                </button>
+            </div>
+            <!--Audio file that is played when the button is clicked-->
+            <audio id="myAudio" src="audio.mp3"></audio>
+        </div>
+    </div>
+  </div>
+    </div>
+</center>
+  </body>
+</html>
