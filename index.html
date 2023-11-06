@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Campus Conspiracies</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&family=Press+Start+2P&display=swap" rel="stylesheet"> 
+    <link rel="icon"  href="img/alien.png"> 
+  </head>
+  <body> 
+    <div id="first-page">
+      <!--Background images-->
+      <div id="img" class="image">
+        <!--Image for left corner of page-->
+        <img class="leftcorner" src="img/leftcorner.png" style="width: 980px; height: 850px; margin-left: -20px;">
+        <!--Image for right corner of page-->
+        <img class="rightcorner" src="img/rightcorner.png" style="width: 980px; height: 850px; padding-left: 482px;">
+        <!--Image for bottom left corner of page-->
+        <img class="leftcornerdown" src="img/leftcornerdown.png" style="width: 998px; height: 850px; margin-left: -20px;">
+        <!--Image for bottom right corner of page-->
+        <img class="rightcornerdown"  src="img/rightcornerdown.png" style="width: 990px; height: 850px; padding-left: 450px;">
+      </div>
+      <center>
+      <div id="first-page">
+          <div class="title">
+            <h1 class="main-text">Campus Conspiracies</h1>
+            <h2 class="sub-text">Unconvering the Unknown</h2>
+            <!--Photo hyperlink to take users to second page-->
+            <div id="second-page-btn">
+              <a href="index2.html" class="active">
+                  <img id="second-page-btn" src="img/top2.png">
+              </a>
+            </div>
+            <!--Popup for informatin button-->
+            <div class="popup-overlay">
+            <div class="popup" id="popup-1">
+              <div class="overlay"></div>
+              <div class="content">
+                <div class="close-btn" onclick="togglePopup()">&times;</div>
+                <!--Content within the popup overlay-->
+                <h2>Welcome to Campus Conspiracies!<br><br> &#128125;</h2>
+                <p>Welcome to Campus Conspiracies, your insider's guide to all things intriguing and captivating at New York University Abu Dhabi. We're the podcast that's not afraid to uncover the juiciest stories, the latest gossip, and the most buzzworthy news on our dynamic campus. With a passion for uncovering the untold tales, we're here to dive deep into the vibrant heart of NYUAD and bring you the inside scoop on the fascinating world we call home. Join us as we unravel the campus's many mysteries, explore the vibrant cultural scene, and share the remarkable stories of the students, faculty, and staff that make NYUAD an extraordinary place to learn, live, and dream. Get ready to tune in, connect, and be part of the Campus Conspiracies community, where the intriguing stories never stop.</p>
+              </div>
+            </div>
+            <!--Information button and opens up the popup-->
+            <button onclick="togglePopup()">
+              <a class="info-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="bi-info-circle" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                </svg>
+              </a>
+            </button>
+          </div>
+        </center>
+      </div>
+    </div>
+  </body>
+  </html>
+
+  
