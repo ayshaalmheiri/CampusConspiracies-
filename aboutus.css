@@ -16,8 +16,7 @@ body{
   display:flexbox;
 }
 
-
-
+/* Animatons to help move imgs left, right, up, and down */
 @keyframes shakeLeftRight {
   /* At the start (0% progress), keep the element in its initial position */
   0%{
