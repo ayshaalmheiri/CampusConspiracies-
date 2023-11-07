@@ -1,0 +1,183 @@
+body{
+  background-color: #c1c3c1;
+  text-decoration: none;
+ }
+
+ #img{
+  height: 150px;
+  width: 150px;
+  position: fixed;
+ }  
+  
+ img{
+  height: 950px;
+  width: 700px;
+  position: fixed;
+  display:flexbox;
+}
+
+
+@keyframes shakeLeftRight {
+  /* At the start (0% progress), keep the element in its initial position */
+  0%{
+    transform: translateX(0);
+  }
+
+  /* At 25% progress, shake the element to the right by 5 pixels */
+  25% {
+    transform: translateX(-5px); /* Shake to the left */
+  }
+
+  /* At 75% progress, shake the element to the left by 5 pixels */
+  75% {
+    transform: translateX(5px); /* Shake to the right */
+  }
+}
+
+.leftcorner {
+  animation: shakeLeftRight 3.5s linear infinite;
+}
+
+@keyframes shakeRightLeft {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px); /* Shake to the right */
+  }
+  75% {
+    transform: translateX(-5px); /* Shake to the left */
+  }
+}
+
+.rightcorner {
+  animation: shakeRightLeft 3.5s linear infinite;
+}
+
+.rightcornerdown {
+  animation: shakeRightLeft 3.5s linear infinite;
+}
+
+@keyframes shakeLeftRightDown {
+  /* At the start (0%) and end (100%), keep the element in its initial  position */
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  /* At 25% progress, shake the element up by 5 pixels */
+  25% {
+    transform: translateY(-5px); /* Shake up */
+  }
+
+  /* At 75% progress, shake the element down by 5 pixels */
+  75% {
+    transform: translateY(5px); /* Shake down */
+  }
+}
+
+.leftcornerdown {
+  animation: shakeLeftRightDown 3.5s linear infinite;
+  max-width: 100%;
+}
+
+@keyframes shakeRightLeftDown {
+  /* At the start (0%) and end (100%), keep the element in its initial  position */
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+    /* At 25% progress, shake the element down by 5 pixels */
+  25% {
+    transform: translateY(5px); /* Shake down */
+  }
+
+  /* At 75% progress, shake the element up by 5 pixels */
+  75% {
+    transform: translateY(-5px); /* Shake up */
+  }
+}
+
+.rightcornerdown {
+  animation: shakeRightLeftDown 3.5s linear infinite;
+  max-width: 100%;
+}
+
+ nav {
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  z-index: 999; /* z-index to ensure it appears above other content */
+}
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: center; /* Center the navigation items horizontally */
+    text-align: center; /* Center the text within each list item */
+    margin-left: 10px;
+  }
+  
+  nav li {
+    padding-top: 36px;
+    margin: 0 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #747070;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-family: sans-serif; 
+    font-weight: normal; 
+    line-height: normal; 
+  }
+  
+  nav a:hover {
+    background-color: #9a9d9a;
+    color: white;
+  }
+
+  .nav-items li:active a{
+    background-color: #a9aca9;
+  }
+
+  #main-section .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+    max-width: 800px; /* Limits the width of the text */
+    margin: 0 auto; /* Centers the container horizontally */
+  }
+  
+  .title{
+    padding: 50px;
+    padding-left: 85px;
+    margin-top: 140px;
+   }
+    
+  #main-section .main-text{
+  font-size: 33px;
+  font-weight: bold;
+  color:#7d7d7d;
+  margin-top: 150px;
+  font-family: 'Lato', sans-serif;
+}
+
+  #main-section .sub-text {
+  font-family: sans-serif;
+  margin-top: 200px;
+  color:#6a6868;
+  font-size: 17px;
+  font-weight:lighter;
+  line-height: 40px;
+  text-align: justify;
+  margin-right: 120px;
+  margin-left: 120px;
+ }
