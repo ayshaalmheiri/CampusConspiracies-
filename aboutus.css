@@ -17,6 +17,7 @@ body{
 }
 
 
+
 @keyframes shakeLeftRight {
   /* At the start (0% progress), keep the element in its initial position */
   0%{
@@ -102,11 +103,12 @@ body{
   max-width: 100%;
 }
 
+/* Navigation Bar*/
  nav {
   position: fixed; 
   top: 0; 
   width: 100%; 
-  z-index: 999; /* z-index to ensure it appears above other content */
+  z-index: 999; 
 }
 
   nav ul {
@@ -114,8 +116,8 @@ body{
     display: flex;
     list-style: none;
     padding: 0;
-    justify-content: center; /* Center the navigation items horizontally */
-    text-align: center; /* Center the text within each list item */
+    justify-content: center;
+    text-align: center; 
     margin-left: 10px;
   }
   
@@ -161,15 +163,8 @@ body{
     padding-left: 85px;
     margin-top: 140px;
    }
-    
-  #main-section .main-text{
-  font-size: 33px;
-  font-weight: bold;
-  color:#7d7d7d;
-  margin-top: 150px;
-  font-family: 'Lato', sans-serif;
-}
 
+/* Targets class, 'sub-text', within the ID, 'main-section' */
   #main-section .sub-text {
   font-family: sans-serif;
   margin-top: 200px;
