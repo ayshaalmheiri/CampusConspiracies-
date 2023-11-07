@@ -3,11 +3,12 @@ body{
   text-decoration: none;
  }
 
+/* Navigation Bar */
  nav {
-  position: fixed; /* Fixed position to make the nav bar stay at the top */
-  top: 0; /* Optional: Specify the distance from the top of the viewport */
-  width: 100%; /* Make the nav bar span the entire width */
-  z-index: 999; /* Optional: Use z-index to ensure it appears above other content */
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  z-index: 999; 
 }
 
   nav ul {
@@ -15,8 +16,8 @@ body{
     display: flex;
     list-style: none;
     padding: 0;
-    justify-content: center; /* Center the navigation items horizontally */
-    text-align: center; /* Center the text within each list item */
+    justify-content: center; 
+    text-align: center; 
     margin-left: 10px;
   }
   
@@ -34,9 +35,9 @@ body{
     padding: 10px 20px;
     border-radius: 20px;
     font-size: 18px;
-    font-family: sans-serif; /* Use sans-serif font */
-    font-weight: normal; /* Make it not bold */
-    line-height: normal; /* Remove any additional line-height that makes it appear higher */
+    font-family: sans-serif; 
+    font-weight: normal; 
+    line-height: normal; 
   }
   
   nav a:hover {
@@ -61,13 +62,19 @@ body{
   display:flexbox;
 }
 
+
 @keyframes shakeLeftRight {
+  /* At the start (0% progress), keep the element in its initial position */
   0%{
     transform: translateX(0);
   }
+
+  /* At 25% progress, shake the element to the right by 5 pixels */
   25% {
     transform: translateX(-5px); /* Shake to the left */
   }
+
+  /* At 75% progress, shake the element to the left by 5 pixels */
   75% {
     transform: translateX(5px); /* Shake to the right */
   }
@@ -98,12 +105,17 @@ body{
 }
 
 @keyframes shakeLeftRightDown {
+  /* At the start (0%) and end (100%), keep the element in its initial  position */
   0%, 100% {
     transform: translateY(0);
   }
+
+  /* At 25% progress, shake the element up by 5 pixels */
   25% {
     transform: translateY(-5px); /* Shake up */
   }
+
+  /* At 75% progress, shake the element down by 5 pixels */
   75% {
     transform: translateY(5px); /* Shake down */
   }
@@ -115,12 +127,17 @@ body{
 }
 
 @keyframes shakeRightLeftDown {
+  /* At the start (0%) and end (100%), keep the element in its initial  position */
   0%, 100% {
     transform: translateY(0);
   }
+
+    /* At 25% progress, shake the element down by 5 pixels */
   25% {
     transform: translateY(5px); /* Shake down */
   }
+
+  /* At 75% progress, shake the element up by 5 pixels */
   75% {
     transform: translateY(-5px); /* Shake up */
   }
