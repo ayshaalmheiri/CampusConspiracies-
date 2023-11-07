@@ -3,6 +3,7 @@ body{
   text-decoration: none;
  }
 
+/* Nav Bar */
 nav{
  position: fixed;
   display: flex;
@@ -45,12 +46,14 @@ font-family: sans-serif;
   background-color: #a9aca9;
 }
 
+/* Specifically targets background imgs*/
 #img{
   height: 150px;
   width: 150px;
   position: fixed;
  }  
-  
+
+/* For all images on page*/
  img{
   height: 950px;
   width: 700px;
@@ -58,6 +61,7 @@ font-family: sans-serif;
   display:flexbox;
 }
 
+/* Animatons to help move imgs left, right, up, and down */
 @keyframes shakeLeftRight {
   0%{
     transform: translateX(0);
@@ -70,59 +74,79 @@ font-family: sans-serif;
   }
 }
 
+/* Targets img in top left corner */
 .leftcorner {
   animation: shakeLeftRight 3.5s linear infinite;
 }
 
 @keyframes shakeRightLeft {
+/* At the start (0% progress), keep the element in its initial position */
   0% {
     transform: translateX(0);
   }
+  
+  /* At 25% progress, shake the element to the right by 5 pixels */
   25% {
     transform: translateX(5px); /* Shake to the right */
   }
+
+  /* At 75% progress, shake the element to the left by 5 pixels */
   75% {
     transform: translateX(-5px); /* Shake to the left */
   }
 }
 
+/* Targets img in top right corner */
 .rightcorner {
   animation: shakeRightLeft 3.5s linear infinite;
 }
 
+/* Targets img in bottom right corner */
 .rightcornerdown {
   animation: shakeRightLeft 3.5s linear infinite;
 }
 
 @keyframes shakeLeftRightDown {
+   /* At the start (0%) and end (100%), keep the element in its initial  position */
   0%, 100% {
     transform: translateY(0);
   }
+  
+  /* At 25% progress, shake the element up by 5 pixels */
   25% {
     transform: translateY(-5px); /* Shake up */
   }
+
+  /* At 75% progress, shake the element down by 5 pixels */
   75% {
     transform: translateY(5px); /* Shake down */
   }
 }
 
+/* Targets img in bottom left corner */
 .leftcornerdown {
   animation: shakeLeftRightDown 3.5s linear infinite;
   max-width: 100%;
 }
 
 @keyframes shakeRightLeftDown {
+  /* At the start (0%) and end (100%), keep the element in its initial  position */
   0%, 100% {
     transform: translateY(0);
   }
+
+  /* At 25% progress, shake the element down by 5 pixels */
   25% {
     transform: translateY(5px); /* Shake down */
   }
+
+  /* At 75% progress, shake the element up by 5 pixels */
   75% {
     transform: translateY(-5px); /* Shake up */
   }
 }
 
+/* Targets img in bottom right corner */
 .rightcornerdown {
   animation: shakeRightLeftDown 3.5s linear infinite;
   max-width: 100%;
@@ -135,7 +159,8 @@ font-family: sans-serif;
   padding-right: 60px;
   margin-top: 70px;
  }
-  
+
+/* Targets the class, 'main-text', under the id, 'first-page'*/
 #first-page .main-text{
   font-family: 'Poppins', sans-serif;
   font-size: 65px;
@@ -144,6 +169,7 @@ font-family: sans-serif;
   margin-top: 150px;
 }
 
+/* Targets the class, 'sub-text', under the id, 'first-page'*/
 #first-page .sub-text {
   font-family: sans-serif;
   color:#6a6868;
@@ -151,160 +177,7 @@ font-family: sans-serif;
   font-weight:lighter;
  }
 
-#second-page-btn{
-  position: relative;
-  height: 140px;
-  width: 175px;
-  padding-right: 4px;
-  margin-top: 3px;
-}
 
-#second-page-btn:hover{
-  opacity: 0.8;
- }
-  
-#second-page-btn:active{
-  opacity: 0.6;
- }
-
-#first-page .popup-overlay {
-  margin-left: 12px;
-  margin-top: 60px;
-}
-
-.overlay{
-  position: absolute;
-  top:0;
-  left: 0;
-  padding-top: 10%;
-  width: 100vw;
-  height: 100%;
-  background: rgb(132, 132, 125);
-  z-index: -1;
-  opacity: 0;
-  overflow: hidden;
-}
-
-.popup .overlay {
-  position:fixed;
-  top:0px;
-  left:0px;
-  width:100vw;
-  height:100vh;
-  background:rgb(132, 132, 125);
-  z-index:1;
-  display:none;
-  opacity: 0.95;
-}
-
-.popup .content {
-  position:absolute;
-  top:25%;
-  left:50%;
-  transform:translate(-50%,-50%) scale(0);
-  width:500px;
-  height:250px;
-  z-index:5;
-  text-align:center;
-  padding:20px;
-  box-sizing:border-box;
-  font-family:"Open Sans",sans-serif;
-}
-
-.popup .close-btn {
-  cursor:pointer;
-  position:absolute;
-  right:20px;
-  top:20px;
-  width:30px;
-  height:30px;
-  color:#fff;
-  font-size:45px;
-  font-weight:600;
-  line-height:30px;
-  text-align:center;
-  border-radius:50%;
-}
-
-/* overlay summary close button styling */
-.overlay .close-button{
-  position: absolute;
-  top:2%;
-  right: 4%;
-  cursor: pointer;
-  color: #fff;
-  font-weight: 600;
-  font-size: 3em;
-}
-
-.overlay p{
-  padding: 10%;
-  color: #c1c3c1;
-  font-weight: 200px;
-  font-size: 1em;
-}
-
-.popup.active h2{
-  color: white;
-  margin-top: 50px;
-  margin-right: 5px ;
-  font-family: sans-serif;
-  letter-spacing: 2px;
-}
-
-.popup-overlay p{
-  color: white;
-  line-height: 30px;
-  text-align: left;
-  margin-top: 40px;
-  font-size: 18px;
-}
-
-.popup.active .overlay {
-  display:block;
-}
-
-.popup.active .content {
-  transition:all 300ms ease-in-out;
-  transform:translate(-50%,-50%) scale(1);
-}
-
-/* expose summary when summary is active*/
-body.activeSummary .overlay-summary{
-  z-index: 2;
-  opacity: 1;
-}
-
-button {
-  position:absolute;
-  transform:translate(-50%,-50%);
-  font-size:18px;
-  border:none;
-  color:#c1c3c1;
-  text-transform:uppercase;
-  font-weight:600;
-  background:#c1c3c1;
-  border-radius: 100px;
-  padding: 10px 20px; /* Padding for the button */
-}
-
-#first-page .info-btn {
-  margin-left: 8px;
-  margin-top: 80px;
- }
-  
-.bi-info-circle{
-  fill: rgb(114, 114, 105);
-  cursor: pointer;
-  top:0.2%;
-  right: 35%;
-  font-size: 200%;
-  position: absolute;
-}
-
-.info-btn:active{
-  opacity: 0.8;
-}
   
   
 
