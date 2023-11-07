@@ -2,7 +2,49 @@ body{
   background-color: #c1c3c1;
   text-decoration: none;
  }
-  
+
+nav{
+ position: fixed;
+  display: flex;
+  width:100%;
+  justify-content: space-around;
+  height: 80px;
+  line-height:80px ;
+  z-index: 111;
+}
+
+.nav-items{
+  display: flex;
+  float: right;
+  padding-left: 150px;
+}
+
+.nav-items li{
+  list-style: none;
+  margin: 0 15px;
+}
+
+.nav-items li a{
+font-size: 16px;
+color:#747070;
+letter-spacing: 3px;
+text-decoration: none;
+text-transform: capitalize;
+margin-right: 40px;
+font-family: sans-serif;
+}
+
+.nav-items li:hover a{
+ background-color: #9a9d9a;
+ color: white;
+ border-radius: 20px;
+ padding: 10px 10px;
+}
+
+.nav-items li:active a{
+  background-color: #a9aca9;
+}
+
 #img{
   height: 150px;
   width: 150px;
@@ -265,6 +307,16 @@ button {
 }
   
   
+
+
+
+
+
+
+
+
+
+
 
 
 
