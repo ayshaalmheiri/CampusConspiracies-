@@ -1,1 +1,176 @@
+body{
+  background-color: #c1c3c1;
+  text-decoration: none;
+ }
+
+ #img{
+  height: 150px;
+  width: 150px;
+  position: fixed;
+ }  
+  
+ img{
+  height: 950px;
+  width: 700px;
+  position: fixed;
+  display:flexbox;
+}
+
+
+ /* Animatons to help move imgs left, right, up, and down */
+    @keyframes shakeLeftRight {
+      0%{
+        transform: translateX(0);
+      }
+      25% {
+        transform: translateX(-5px); /* Shakes to the left */
+      }
+      75% {
+        transform: translateX(5px); /* Shakes to the right */
+      }
+    }
+    
+  /* Targets img in top left corner */
+    .leftcorner {
+      animation: shakeLeftRight 3.5s linear infinite;
+    }
+  
+    @keyframes shakeRightLeft {
+      0% {
+        transform: translateX(0);
+      }
+      25% {
+        transform: translateX(5px); /* Shakes to the right */
+      }
+      75% {
+        transform: translateX(-5px); /* Shakes to the left */
+      }
+    }
+  
+  /* Targets img in top right corner */
+    .rightcorner {
+      animation: shakeRightLeft 3.5s linear infinite;
+    }
+    
+  /* Targets img in bottom right corner */
+    .rightcornerdown {
+      animation: shakeRightLeft 3.5s linear infinite;
+    }
+  
+
+    @keyframes shakeLeftRightDown {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      25% {
+        transform: translateY(-5px); /* Shakes up */
+      }
+      75% {
+        transform: translateY(5px); /* Shakes down */
+      }
+    }
+    
+    /* Targets img in bottom left corner */
+    .leftcornerdown {
+      animation: shakeLeftRightDown 3.5s linear infinite;
+      max-width: 100%;
+    }
+    
+    @keyframes shakeRightLeftDown {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      25% {
+        transform: translateY(5px); /* Shakes down */
+      }
+      75% {
+        transform: translateY(-5px); /* Shakes up */
+      }
+    }
+  
+    /* Targets img in bottom right corner */
+    .rightcornerdown {
+      animation: shakeRightLeftDown 3.5s linear infinite;
+      max-width: 100%;
+    }
+
+ nav {
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  z-index: 999; 
+ }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: center; 
+    text-align: center; 
+    margin-left: 10px;
+  }
+  
+  nav li {
+    padding-top: 36px;
+    margin: 0 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #747070;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-family: sans-serif; 
+    font-weight: normal; 
+    line-height: normal; 
+  }
+  
+  nav a:hover {
+    background-color: #9a9d9a;
+    color: white;
+  }
+
+  .nav-items li:active a{
+    background-color: #a9aca9;
+  }
+
+  #main-section .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+    max-width: 800px; 
+    margin: 0 auto; 
+  }
+  
+  .title{
+    padding: 50px;
+    padding-left: 85px;
+    margin-top: 140px;
+   }
+    
+  #main-section .main-text{
+  font-size: 33px;
+  font-weight: bold;
+  color:#7d7d7d;
+  margin-top: 150px;
+  font-family: 'Lato', sans-serif;
+}
+
+  #main-section .sub-text {
+  font-family: sans-serif;
+  margin-top: 200px;
+  color:#6a6868;
+  font-size: 17px;
+  font-weight:lighter;
+  line-height: 40px;
+  text-align: justify;
+  margin-right: 120px;
+  margin-left: 120px;
+ }
 
