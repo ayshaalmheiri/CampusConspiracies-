@@ -3,10 +3,10 @@ body{
   }
 
 nav {
-  position: fixed; /* Fixed position to make the nav bar stay at the top */
-  top: 0; /* Optional: Specify the distance from the top of the viewport */
-  width: 100%; /* Make the nav bar span the entire width */
-  z-index: 999; /* z-index to ensure it appears above other content */
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  z-index: 20; 
 }
 
   nav ul {
@@ -14,8 +14,8 @@ nav {
     display: flex;
     list-style: none;
     padding: 0;
-    justify-content: center; /* Center the navigation items horizontally */
-    text-align: center; /* Center the text within each list item */
+    justify-content: center; 
+    text-align: center; 
     margin-left: 10px;
   }
   
@@ -33,9 +33,9 @@ nav {
     padding: 10px 20px;
     border-radius: 20px;
     font-size: 18px;
-    font-family: sans-serif; /* Use sans-serif font */
-    font-weight: normal; /* Make it not bold */
-    line-height: normal; /* Remove any additional line-height that makes it appear higher */
+    font-family: sans-serif;
+    font-weight: normal; 
+    line-height: normal; 
   }
   
   nav a:hover {
@@ -209,6 +209,7 @@ letter-spacing: 1.5;
   line-height:30px;
   text-align:center;
   border-radius:50%;
+  z-index: 30;
 }
 
 .popup h2{
