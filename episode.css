@@ -2,49 +2,50 @@ body{
   background-color: #c1c3c1;
   }
 
-  nav{
-    position: fixed;
-     display: flex;
-     width:100%;
-     justify-content: space-around;
-     height: 80px;
-     line-height:80px;
-     z-index: 111;
-   }
-   
-   .nav-items{
-     display: flex;
-     float: right;
-     padding-left: 150px;
-   }
-   
-   .nav-items li{
-     list-style: none;
-     margin: 0 15px;
+nav {
+  position: fixed; /* Fixed position to make the nav bar stay at the top */
+  top: 0; /* Optional: Specify the distance from the top of the viewport */
+  width: 100%; /* Make the nav bar span the entire width */
+  z-index: 999; /* z-index to ensure it appears above other content */
+}
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: center; /* Center the navigation items horizontally */
+    text-align: center; /* Center the text within each list item */
+    margin-left: 10px;
+  }
+  
+  nav li {
+    padding-top: 26px;
+    margin: 0 10px;
+    font-family: sans-serif;
     font-weight: bold;
-   }
-   
-   .nav-items li a{
-   font-size: 16px;
-   color:#747070;
-   letter-spacing: 3px;
-   text-decoration: none;
-   text-transform: capitalize;
-   margin-right: 40px;
-   font-family: sans-serif;
-   }
-   
-   .nav-items li:hover a{
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #747070;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-family: sans-serif; /* Use sans-serif font */
+    font-weight: normal; /* Make it not bold */
+    line-height: normal; /* Remove any additional line-height that makes it appear higher */
+  }
+  
+  nav a:hover {
     background-color: #9a9d9a;
     color: white;
-    border-radius: 20px;
-    padding: 10px 10px;
-    font-family: sans-serif;
-   }
-   
-   .nav-items li:active a{
-     background-color: #a9aca9;
-   }
+  }
+
+  .nav-items li:active a{
+    background-color: #a9aca9;
+  }
 
 /* Specifically targets background imgs*/
 #img{
@@ -164,6 +165,7 @@ letter-spacing: 1.5;
   font-size: 17px;
   color: #6a6868;
   font-family: sans-serif;
+  padding-bottom: 12px;
 }
 
 /* Overlay */
@@ -236,7 +238,7 @@ letter-spacing: 1.5;
 
 /* CSS applied to buttons are applied to all buttons on page */
 button {
-  position:flex;
+  display:flex;
   transform:translate(-50%,-50%);
   font-size:18px;
   border:none;
@@ -262,6 +264,7 @@ opacity: 0.8;
 /* Adjusting transcript icon */
 .transcript-btn svg {
   margin-right: 10px; 
+  
 }
 
 /*Adjusting text within <a> element*/
