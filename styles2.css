@@ -2,6 +2,50 @@ body{
   background-color: #c1c3c1;
   }
 
+  nav{
+    position: fixed;
+     display: flex;
+     width:100%;
+     justify-content: space-around;
+     height: 80px;
+     line-height:80px;
+     z-index: 111;
+   }
+   
+   .nav-items{
+     display: flex;
+     float: right;
+     padding-left: 150px;
+   }
+   
+   .nav-items li{
+     list-style: none;
+     margin: 0 15px;
+    font-weight: bold;
+   }
+   
+   .nav-items li a{
+   font-size: 16px;
+   color:#747070;
+   letter-spacing: 3px;
+   text-decoration: none;
+   text-transform: capitalize;
+   margin-right: 40px;
+   font-family: sans-serif;
+   }
+   
+   .nav-items li:hover a{
+    background-color: #9a9d9a;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 10px;
+    font-family: sans-serif;
+   }
+   
+   .nav-items li:active a{
+     background-color: #a9aca9;
+   }
+
 /* Specifically targets background imgs*/
 #img{
   height: 150px;
@@ -15,6 +59,14 @@ img{
   position: fixed;
   display:flex;
   }
+
+.main-img{
+  position: relative;
+  height: 175px;
+  width: 195px;
+  margin-top: 20px;
+  margin-left: 30px;
+}
   
   /* Animatons to help move imgs left, right, up, and down */
 
@@ -96,7 +148,7 @@ img{
 
 /* Targets main text on page such as h1, h4, and the pop up div elements */
 .episode-info{
-margin-top: 220px;
+margin-top: 40px;
 margin-left: 24px;
 }
 
