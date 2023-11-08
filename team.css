@@ -1,105 +1,16 @@
 body{
   background-color: #c1c3c1;
-  text-decoration: none;
- }
-
- #img{
-  height: 150px;
-  width: 150px;
-  position: fixed;
- }  
-  
- img{
-  height: 950px;
-  width: 700px;
-  position: fixed;
-  display:flexbox;
+    margin: 0;
+    padding: 0;
+  font-family: 'Lato', sans-serif;
 }
 
-
- /* Animatons to help move imgs left, right, up, and down */
-    @keyframes shakeLeftRight {
-      0%{
-        transform: translateX(0);
-      }
-      25% {
-        transform: translateX(-5px); /* Shakes to the left */
-      }
-      75% {
-        transform: translateX(5px); /* Shakes to the right */
-      }
-    }
-    
-  /* Targets img in top left corner */
-    .leftcorner {
-      animation: shakeLeftRight 3.5s linear infinite;
-    }
-  
-    @keyframes shakeRightLeft {
-      0% {
-        transform: translateX(0);
-      }
-      25% {
-        transform: translateX(5px); /* Shakes to the right */
-      }
-      75% {
-        transform: translateX(-5px); /* Shakes to the left */
-      }
-    }
-  
-  /* Targets img in top right corner */
-    .rightcorner {
-      animation: shakeRightLeft 3.5s linear infinite;
-    }
-    
-  /* Targets img in bottom right corner */
-    .rightcornerdown {
-      animation: shakeRightLeft 3.5s linear infinite;
-    }
-  
-
-    @keyframes shakeLeftRightDown {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      25% {
-        transform: translateY(-5px); /* Shakes up */
-      }
-      75% {
-        transform: translateY(5px); /* Shakes down */
-      }
-    }
-    
-    /* Targets img in bottom left corner */
-    .leftcornerdown {
-      animation: shakeLeftRightDown 3.5s linear infinite;
-      max-width: 100%;
-    }
-    
-    @keyframes shakeRightLeftDown {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      25% {
-        transform: translateY(5px); /* Shakes down */
-      }
-      75% {
-        transform: translateY(-5px); /* Shakes up */
-      }
-    }
-  
-    /* Targets img in bottom right corner */
-    .rightcornerdown {
-      animation: shakeRightLeftDown 3.5s linear infinite;
-      max-width: 100%;
-    }
-
- nav {
+nav {
   position: fixed; 
   top: 0; 
   width: 100%; 
   z-index: 999; 
- }
+}
 
   nav ul {
     list-style: none;
@@ -112,7 +23,7 @@ body{
   }
   
   nav li {
-    padding-top: 36px;
+    padding-top: 26px;
     margin: 0 10px;
     font-family: sans-serif;
     font-weight: bold;
@@ -139,38 +50,60 @@ body{
     background-color: #a9aca9;
   }
 
-  #main-section .title {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    text-align: center; 
-    max-width: 800px; 
-    margin: 0 auto; 
-  }
-  
-  .title{
-    padding: 50px;
-    padding-left: 85px;
-    margin-top: 140px;
-   }
-    
-  #main-section .main-text{
-  font-size: 33px;
-  font-weight: bold;
-  color:#7d7d7d;
-  margin-top: 150px;
-  font-family: 'Lato', sans-serif;
+*{
+    box-sizing: border-box;
 }
 
-  #main-section .sub-text {
-  font-family: sans-serif;
-  margin-top: 200px;
-  color:#6a6868;
-  font-size: 17px;
+.team{
+    margin-top: 10%;
+    text-align: center;
+}
+
+.team .meet {
+    color: #646363;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 30px;
+    font-size: 50px;
+}
+
+.team .sub-text{
   font-weight:lighter;
-  line-height: 40px;
-  text-align: justify;
-  margin-right: 120px;
-  margin-left: 120px;
- }
+  font-size: 17px;
+  color: #6a6868;
+  font-family: sans-serif;
+  padding-bottom: 12px;
+}
+
+.team .member{
+    display: inline-block;
+    margin: 40px;
+    width: 400px;
+    height: 500px;
+    background-color: #fff;
+    color: #7e7b7b;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.team .member img{
+    margin: 20px;
+    height: 250px;
+    width: 200px;
+}
+
+
+.member h3{
+    color: #646363;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+
+.member p{
+    letter-spacing: 2px;
+}
+
 
