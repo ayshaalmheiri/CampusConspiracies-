@@ -11,30 +11,47 @@ body{
   /* Center align content */
   .team {
     text-align: center;
+  
   }
 
   /* Reduce margin and padding to save space */
   .member {
-    margin: 20px 0;
-    padding: 10px;
+  
+  }
+  
+ h1{
+   font-size:35px;
+   margin-right:-100px
   }
 
-  /* Adjust font sizes for better legibility on smaller screens */
-  .meet {
-    font-size: 24px;
-  }
-
-  .sub-text {
+  .team .sub-text {
     font-size: 14px;
+      margin-right:-100px
   }
 
   h3 {
-    font-size: 18px;
+    font-size: 20px;
   }
   
   p {
-    font-size: 14px;
+    font-size:18px;
   }
+  
+   /* Adjust the spacing between nav items */
+.nav-items {
+ font-size:10px;
+ align-items:center;
+ justify-content:center;
+ margin-right: -60px;
+}
+ .nav-items li {
+    text-align: center; /* Center-align the text within list items */
+   margin-bottom: 30px;
+  }
+}
+}
+}
+{}
 }
 
 nav {
