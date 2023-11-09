@@ -4,9 +4,29 @@ body{
  }
 
 @media (max-width: 768px) {
+  /* Remove background images */
   #img {
-    display: none; /* Hides id="img" div and its child elements on screens 768px or less */
+    display: none;
   }
+  
+ .nav-bar{
+   margin-bottom:-50px;
+ }
+    /* Adjust the spacing between nav items */
+.nav-items {
+ font-size:10px;
+ align-items:center;
+ justify-content:center;
+ margin-right: 15px;
+ 
+}
+ .nav-items li {
+    text-align: center; /* Center-align the text within list items */
+  }
+}
+}
+}
+{}
 }
 
  #img{
