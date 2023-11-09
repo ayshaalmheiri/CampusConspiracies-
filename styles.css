@@ -7,26 +7,40 @@ body{
   #img {
     display: none; /* Hides id="img" div and its child elements on screens 768px or less */
   }
-  
-     .main-text {
-    font-size: 24px; /* Adjust the font size to your preference */
+ 
+   #first-page .main-text.main-text {
+    font-size:45px; /* Adjust the font size to your preference */
+    margin-left: -40px;
+    margin-top:-50px;
   }
 
   .sub-text {
     font-size: 16px; /* Adjust the font size to your preference */
+    margin-left: -40px;
+    margin-top:-15px;
   }
 
   .sub-sub-text {
     font-size: 14px; /* Adjust the font size to your preference */
+    margin-left: -40px;
+    margin-top:-50px;
   }
 
   /* Adjust the spacing between nav items */
-  .nav-items li {
-    margin-right: 10px; /* Adjust the spacing between nav items to your preference */
+.nav-items {
+ font-size:10px;
+ align-items:center;
+ justify-content:center;
+ margin-right: 15px;
+ 
+}
+ 
+ .nav-items li {
+    text-align: center; /* Center-align the text within list items */
   }
 }
 }
-}
+
 
 /* Navigation Bar */
  nav {
