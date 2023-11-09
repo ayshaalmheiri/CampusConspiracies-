@@ -4,6 +4,31 @@ body{
   height:100%
   }
 
+@media (max-width: 768px) {
+  /* Remove background images */
+  #img {
+    display: none;
+  }
+ .nav-bar{
+   margin-bottom:130px;
+ }
+    /* Adjust the spacing between nav items */
+.nav-items {
+ font-size:10px;
+ align-items:center;
+ justify-content:center;
+ margin-right: 15px;
+ 
+}
+ .nav-items li {
+    text-align: center; /* Center-align the text within list items */
+  }
+}
+}
+}
+{}
+}
+
 nav {
   position: fixed; 
   top: 0; 
