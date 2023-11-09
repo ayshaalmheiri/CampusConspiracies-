@@ -7,6 +7,36 @@ body{
   height:100%
 }
 
+@media (max-width: 768px) {
+  /* Center align content */
+  .team {
+    text-align: center;
+  }
+
+  /* Reduce margin and padding to save space */
+  .member {
+    margin: 20px 0;
+    padding: 10px;
+  }
+
+  /* Adjust font sizes for better legibility on smaller screens */
+  .meet {
+    font-size: 24px;
+  }
+
+  .sub-text {
+    font-size: 14px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+  
+  p {
+    font-size: 14px;
+  }
+}
+
 nav {
   position: fixed; 
   top: 0; 
