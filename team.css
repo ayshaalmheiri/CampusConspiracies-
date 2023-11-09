@@ -7,17 +7,15 @@ body{
   height:100%
 }
 
+
 @media (max-width: 768px) {
   /* Center align content */
   .team {
     text-align: center;
-  
   }
-
+ 
   /* Reduce margin and padding to save space */
-  .member {
-  
-  }
+
   
  h1{
    font-size:35px;
