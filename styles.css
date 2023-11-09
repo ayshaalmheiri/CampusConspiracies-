@@ -1,14 +1,31 @@
 body{
   background-color: #c1c3c1;
   text-decoration: none;
-  width:100%;
-  height:100%
  }
 
 @media (max-width: 768px) {
   #img {
     display: none; /* Hides id="img" div and its child elements on screens 768px or less */
   }
+  
+     .main-text {
+    font-size: 24px; /* Adjust the font size to your preference */
+  }
+
+  .sub-text {
+    font-size: 16px; /* Adjust the font size to your preference */
+  }
+
+  .sub-sub-text {
+    font-size: 14px; /* Adjust the font size to your preference */
+  }
+
+  /* Adjust the spacing between nav items */
+  .nav-items li {
+    margin-right: 10px; /* Adjust the spacing between nav items to your preference */
+  }
+}
+}
 }
 
 /* Navigation Bar */
