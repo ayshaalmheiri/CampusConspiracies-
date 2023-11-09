@@ -5,6 +5,12 @@ body{
   height:100%
  }
 
+@media (max-width: 768px) {
+  #img {
+    display: none; /* Hides id="img" div and its child elements on screens 768px or less */
+  }
+}
+
 /* Navigation Bar */
  nav {
   position: fixed; 
