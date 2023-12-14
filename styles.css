@@ -1,224 +1,292 @@
-body{
-  background-color: #c1c3c1;
-  text-decoration: none;
- }
+body {
+    background-color: #c1c3c1;
+    text-decoration: none;
+}
 
 @media (max-width: 768px) {
-  #img {
-    display: none; /* Hides id="img" div and its child elements on screens 768px or less */
-  }
- 
-   #first-page .main-text.main-text {
-    font-size:45px; /* Adjust the font size to your preference */
-    margin-left: -40px;
-  }
+    #first-page .main-text {
+        font-size: 45px;
+        margin-left: -40px;
+    }
 
-  .sub-text {
-    font-size: 16px; /* Adjust the font size to your preference */
-    margin-left: -40px;
-    margin-top:-15px;
-  }
+    .sub-text {
+        font-size: 16px;
+        margin-left: -40px;
+        margin-top: -15px;
+    }
 
-  .sub-sub-text {
-    font-size: 14px; /* Adjust the font size to your preference */
-    margin-left: -40px;
-    margin-top:-50px;
-  }
+    .sub-sub-text {
+        font-size: 14px;
+        margin-left: -40px;
+        margin-top: -50px;
+    }
 
-  /* Adjust the spacing between nav items */
-.nav-items {
- font-size:10px;
- align-items:center;
- justify-content:center;
- margin-right: 15px;
- 
+    .nav-items {
+        font-size: 10px;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+    }
+
+        .nav-items li {
+            text-align: center;
+        }
 }
- .nav-items li {
-    text-align: center; /* Center-align the text within list items */
-  }
-}
-}
-}
-{}
+
 
 /* Navigation Bar */
- nav {
-  position: fixed; 
-  top: 0; 
-  width: 100%; 
-  z-index: 999; 
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
 }
 
-  nav ul {
-    list-style: none;
-    display: flex;
-    list-style: none;
-    padding: 0;
-    justify-content: center; 
-    text-align: center; 
-    margin-left: 10px;
-  }
-  
-  nav li {
-    padding-top: 36px;
-    margin: 0 10px;
-    font-family: sans-serif;
-    font-weight: bold;
-  }
+    nav ul {
+        list-style: none;
+        display: flex;
+        list-style: none;
+        padding: 0;
+        justify-content: center;
+        text-align: center;
+        margin-left: 10px;
+    }
 
-  nav a {
-    text-decoration: none;
-    color: #747070;
-    transition: background-color 0.3s, color 0.3s;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-size: 18px;
-    font-family: sans-serif; 
-    font-weight: normal; 
-    line-height: normal; 
-  }
-  
-  nav a:hover {
-    background-color: #9a9d9a;
-    color: white;
-  }
+    nav li {
+        padding-top: 36px;
+        margin: 0 10px;
+        font-family: sans-serif;
+        font-weight: bold;
+    }
 
-  .nav-items li:active a{
+    nav a {
+        text-decoration: none;
+        color: #747070;
+        transition: background-color 0.3s, color 0.3s;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-size: 18px;
+        font-family: sans-serif;
+        font-weight: normal;
+        line-height: normal;
+    }
+
+        nav a:hover {
+            background-color: #9a9d9a;
+            color: white;
+        }
+
+.nav-items li:active a {
     background-color: #a9aca9;
-  }
-
-#img{
-  height: 100%;
-  width: 100%;
-  position: fixed;
- }  
-  
- img{
-  height: 950px;
-  width: 700px;
-  position: fixed;
-  display:flexbox;
 }
+
+#img {
+    position: relative;
+    height: 100vh; /* Set height to 100% of the viewport height */
+    width: 100%; /* Set width to 100% */
+    overflow: hidden; /* Hide overflow to prevent horizontal scrollbar */
+}
+
+img {
+    width: 100%; /* Make the width 100% of the parent container */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Remove display: flex; and use display: block; */
+    position: absolute; /* Position absolutely within the parent container */
+}
+
+#img.image {
+    position: fixed;
+    top:0;
+    left:0;
+}
+
+#img .leftcorner,
+#img .rightcorner,
+#img .leftcornerdown,
+#img .rightcornerdown {
+    width: 70%; /* Make the width 100% of the parent container */
+    height: 80%; /* Maintain the aspect ratio */
+    position: absolute; /* Position absolutely within the parent container */
+    z-index: -1;
+}
+
+/* Adjust the positioning of each image as needed */
+#img .leftcorner {
+    left: 0;
+    top: 0;
+}
+
+#img .rightcorner {
+    right: 0;
+    top: 0;
+}
+
+#img .leftcornerdown {
+    left: 0;
+    bottom: 0;
+}
+
+#img .rightcornerdown {
+    right: 0;
+    bottom: 0;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    #img .leftcorner,
+    #img .rightcorner,
+    #img .leftcornerdown,
+    #img .rightcornerdown {
+        width: 30%; /* Make the width 50% of the parent container for smaller screens */
+        height: 40%; /* Make the height 60% of the parent container for smaller screens */
+    }
+}
+
+/* Media query for even smaller screens, like mobile phones */
+@media (max-width: 480px) {
+    #img {
+        display: none; /* Hides id="img" div and its child elements on screens 768px or less */
+    }
+
+    #first-page .main-text {
+        font-size: 25px;
+        margin-left: -40px;
+    }
+
+    .sub-text {
+        font-size: 8px;
+        margin-left: -40px;
+        margin-top: -15px;
+    }
+
+    .sub-sub-text {
+        font-size: 7px;
+        margin-left: -40px;
+        margin-top: -50px;
+    }
+
+    .nav-items {
+        font-size: 6px;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+    }
+}
+
 
 /* Animatons to help move imgs left, right, up, and down */
 @keyframes shakeLeftRight {
-  /* At the start (0% progress), keep the element in its initial position */
-  0%{
-    transform: translateX(0);
-  }
-
-  /* At 25% progress, shake the element to the right by 5 pixels */
-  25% {
-    transform: translateX(-5px); /* Shake to the left */
-  }
-
-  /* At 75% progress, shake the element to the left by 5 pixels */
-  75% {
-    transform: translateX(5px); /* Shake to the right */
-  }
+    /* At the start (0% progress), keep the element in its initial position */
+    0% {
+        transform: translateX(0);
+    }
+    /* At 25% progress, shake the element to the right by 5 pixels */
+    25% {
+        transform: translateX(-5px); /* Shake to the left */
+    }
+    /* At 75% progress, shake the element to the left by 5 pixels */
+    75% {
+        transform: translateX(5px); /* Shake to the right */
+    }
 }
 
 .leftcorner {
-  animation: shakeLeftRight 3.5s linear infinite;
+    animation: shakeLeftRight 3.5s linear infinite;
 }
 
 @keyframes shakeRightLeft {
-  0% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(5px); /* Shake to the right */
-  }
-  75% {
-    transform: translateX(-5px); /* Shake to the left */
-  }
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(5px); /* Shake to the right */
+    }
+
+    75% {
+        transform: translateX(-5px); /* Shake to the left */
+    }
 }
 
 .rightcorner {
-  animation: shakeRightLeft 3.5s linear infinite;
+    animation: shakeRightLeft 3.5s linear infinite;
 }
 
 .rightcornerdown {
-  animation: shakeRightLeft 3.5s linear infinite;
+    animation: shakeRightLeft 3.5s linear infinite;
 }
 
 @keyframes shakeLeftRightDown {
-  /* At the start (0%) and end (100%), keep the element in its initial  position */
-  0%, 100% {
-    transform: translateY(0);
-  }
-
-  /* At 25% progress, shake the element up by 5 pixels */
-  25% {
-    transform: translateY(-5px); /* Shake up */
-  }
-
-  /* At 75% progress, shake the element down by 5 pixels */
-  75% {
-    transform: translateY(5px); /* Shake down */
-  }
+    /* At the start (0%) and end (100%), keep the element in its initial  position */
+    0%, 100% {
+        transform: translateY(0);
+    }
+    /* At 25% progress, shake the element up by 5 pixels */
+    25% {
+        transform: translateY(-5px); /* Shake up */
+    }
+    /* At 75% progress, shake the element down by 5 pixels */
+    75% {
+        transform: translateY(5px); /* Shake down */
+    }
 }
 
 .leftcornerdown {
-  animation: shakeLeftRightDown 3.5s linear infinite;
-  max-width: 100%;
+    animation: shakeLeftRightDown 3.5s linear infinite;
+    max-width: 100%;
 }
 
 @keyframes shakeRightLeftDown {
-  /* At the start (0%) and end (100%), keep the element in its initial  position */
-  0%, 100% {
-    transform: translateY(0);
-  }
-
+    /* At the start (0%) and end (100%), keep the element in its initial  position */
+    0%, 100% {
+        transform: translateY(0);
+    }
     /* At 25% progress, shake the element down by 5 pixels */
-  25% {
-    transform: translateY(5px); /* Shake down */
-  }
-
-  /* At 75% progress, shake the element up by 5 pixels */
-  75% {
-    transform: translateY(-5px); /* Shake up */
-  }
+    25% {
+        transform: translateY(5px); /* Shake down */
+    }
+    /* At 75% progress, shake the element up by 5 pixels */
+    75% {
+        transform: translateY(-5px); /* Shake up */
+    }
 }
 
 .rightcornerdown {
-  animation: shakeRightLeftDown 3.5s linear infinite;
-  max-width: 100%;
+    animation: shakeRightLeftDown 3.5s linear infinite;
+    max-width: 100%;
 }
 
-.title{
-  display:inline-block;
-  padding: 50px;
-  padding-left: 85px;
-  margin-top: 140px;
- }
-  
-#first-page .main-text{
-  font-family: 'Poppins', sans-serif;
-  font-size: 65px;
-  font-weight: bold;
-  color:#7d7d7d;
-  margin-top: 150px;
+.title {
+    display: inline-block;
+    padding: 50px;
+    padding-left: 85px;
+    margin-top: 140px;
+    position: relative;
+    z-index: 1;
+}
+
+#first-page .main-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 65px;
+    font-weight: bold;
+    color: #7d7d7d;
+    margin-top: 150px;
 }
 
 #first-page .sub-text {
-  font-family: sans-serif;
-  color:#6a6868;
-  font-size: 30px;
-  font-weight:lighter;
- }
+    font-family: sans-serif;
+    color: #6a6868;
+    font-size: 30px;
+    font-weight: lighter;
+}
 
- #first-page .sub-sub-text {
-  font-family: sans-serif;
-  color:#337834;
-  margin-top: 50px;
-  font-size: 22px;
-  font-weight:lighter;
- }
-
-
-
-
+#first-page .sub-sub-text {
+    font-family: sans-serif;
+    color: #337834;
+    margin-top: 50px;
+    font-size: 22px;
+    font-weight: lighter;
+}
 
 
 
